@@ -1,26 +1,146 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import {Button} from "./button/Button";
+import {Input} from "./input/Input";
+import {CounterOne} from "./CounterOne";
+import {CounterTwo} from "./CounterTwo";
+import {CounterOneWithRedux} from "./CounterOneWithRedux";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            {/*<CounterOne />*/}
+            {/*<CounterTwo />*/}
+            <CounterOneWithRedux/>
+        </div>
+    )
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------
+
+
+    //
+    // const [minCount, setMinCount] = useState(0)
+    // const [maxCount, setMaxCount] = useState(1)
+    //
+    // const [count, setCount] = useState(minCount)
+    //
+    //
+    // const addCount = () => {
+    //     if (count < maxCount)
+    //         setCount(count + 1)
+    // }
+    // const resetCount = () => {
+    //         setCount(minCount)
+    // }
+
+    // const maxCountSet = (maxCountInput: number) => {
+    //     setMaxCount(maxCountInput)
+    // }
+    // const startCountSet = (minCountInput: number) => {
+    //     setMinCount(minCountInput)
+    // }
+    // const globalSet = () => {
+    //     if (count < maxCount) {
+    //     setCount(minCount)
+    // }
+    // }
+
+//     const maxCountSet = (maxCountInput: number) => {
+//         setMaxCount(maxCountInput)
+//     }
+//     const startCountSet = (minCountInput: number) => {
+//         setMinCount(minCountInput)
+//     }
+//     const globalSet = (maxCountInput: number,minCountInput: number) => {
+//         if (count < maxCount) {
+//             setCount(minCount)
+//             setMaxCount(maxCountInput)
+//             setMinCount(minCountInput)
+//         }
+//     }
+//
+//     return (
+//         <div className="App">
+//             <div className={'wrapper'}>
+//                 <div className={'setting'}>
+//                     <Display count={count}
+//                              className={'setting'}
+//                              globalSet={globalSet}
+//                              maxCountSet={maxCountSet}
+//                              startCountSet={startCountSet}
+//                              maxCount={maxCount}
+//                              minCount={minCount}
+//                     />
+//                     <Button name={'set'}
+//                             onClick={globalSet}
+//                             className={count < maxCount ? 'Btn' : 'Btn' + ' ' + 'red' + ' ' + 'disabled'}
+//                     />
+//                 </div>
+//                 <div className={'counter'}>
+//                     <Display count={count}
+//                              className={'counter'}
+//                              globalSet={globalSet}
+//                              maxCountSet={maxCountSet}
+//                              startCountSet={startCountSet}
+//                              maxCount={maxCount}
+//                              minCount={minCount}
+//                     />
+//                     <div className='Btn'>
+//                         <Button name={'inc'}
+//                                 onClick={addCount}
+//                                 className={count < maxCount ? 'Btn' : 'Btn' + ' ' + 'disabled'}
+//                         />
+//                         <Button name={'reset'}
+//                                 onClick={resetCount}
+//                                 className={count === minCount ? 'Btn' + ' ' + 'disabled' : 'Btn'}/>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default App;
