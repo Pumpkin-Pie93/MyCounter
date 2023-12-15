@@ -5,15 +5,22 @@ import {Input} from "./input/Input";
 import {CounterOne} from "./CounterOne";
 import {CounterTwo} from "./CounterTwo";
 import {CounterOneWithRedux} from "./CounterOneWithRedux";
+import {NavLink, Route, Routes} from "react-router-dom";
+import {NavLinks} from "./NavLincs";
 
 
 function App() {
 
     return (
         <div className="App">
-            {/*<CounterOne />*/}
-            {/*<CounterTwo />*/}
-            <CounterOneWithRedux/>
+            <NavLinks/>
+            <Routes>
+                <Route path={'/'}/>
+                <Route path={'/*'} element={<div className={'error'}>404</div>}/>
+                <Route path={'/counterOne'} element={<CounterOne/>}/>
+                <Route path={'/counterTwo'} element={<CounterTwo/>}/>
+                <Route path={'/counterWithRedux'} element={<CounterOneWithRedux/>}/>
+            </Routes>
         </div>
     )
 }
@@ -21,72 +28,35 @@ function App() {
 export default App;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //----------------------------------------------------------
 
 
-    //
-    // const [minCount, setMinCount] = useState(0)
-    // const [maxCount, setMaxCount] = useState(1)
-    //
-    // const [count, setCount] = useState(minCount)
-    //
-    //
-    // const addCount = () => {
-    //     if (count < maxCount)
-    //         setCount(count + 1)
-    // }
-    // const resetCount = () => {
-    //         setCount(minCount)
-    // }
+//
+// const [minCount, setMinCount] = useState(0)
+// const [maxCount, setMaxCount] = useState(1)
+//
+// const [count, setCount] = useState(minCount)
+//
+//
+// const addCount = () => {
+//     if (count < maxCount)
+//         setCount(count + 1)
+// }
+// const resetCount = () => {
+//         setCount(minCount)
+// }
 
-    // const maxCountSet = (maxCountInput: number) => {
-    //     setMaxCount(maxCountInput)
-    // }
-    // const startCountSet = (minCountInput: number) => {
-    //     setMinCount(minCountInput)
-    // }
-    // const globalSet = () => {
-    //     if (count < maxCount) {
-    //     setCount(minCount)
-    // }
-    // }
+// const maxCountSet = (maxCountInput: number) => {
+//     setMaxCount(maxCountInput)
+// }
+// const startCountSet = (minCountInput: number) => {
+//     setMinCount(minCountInput)
+// }
+// const globalSet = () => {
+//     if (count < maxCount) {
+//     setCount(minCount)
+// }
+// }
 
 //     const maxCountSet = (maxCountInput: number) => {
 //         setMaxCount(maxCountInput)

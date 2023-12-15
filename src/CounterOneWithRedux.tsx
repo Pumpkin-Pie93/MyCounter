@@ -13,6 +13,7 @@ export const CounterOneWithRedux = () => {
     useEffect(() => {
         getMaxValueFromLocalStorage()
         getMinValueFromLocalStorage()
+
     }, []);
 
 
@@ -40,6 +41,7 @@ export const CounterOneWithRedux = () => {
             let newMinValue = JSON.parse(minValueAsString)
             // setMinValue(newMinValue)
             dispatch(setMinValueAC(newMinValue))
+            dispatch(setCountAC(newMinValue))
         }
     }
 
@@ -104,7 +106,7 @@ export const CounterOneWithRedux = () => {
 
 
     return (
-        <>
+        <div className={'counterOneWrap'}>
             <div className={'wrapper'}>
                 <div className={'inputs'}>
                     <Input style={inputStyle} name={'Max'} value={countState.maxValue} onChange={setMax}/>
@@ -123,7 +125,7 @@ export const CounterOneWithRedux = () => {
                 </div>
 
             </div>
-        </>
+        </div>
 
     );
 };

@@ -91,7 +91,7 @@ export const CounterOne = () => {
 
 
     return (
-        <>
+        <div className={'counterOneWrap'}>
             <div className={'wrapper'}>
                 <div className={'inputs'}>
                     <Input style={inputStyle} name={'Max'} value={maxValue} onChange={setMax}/>
@@ -110,7 +110,7 @@ export const CounterOne = () => {
                 </div>
 
             </div>
-        </>
+        </div>
 
     );
 };

@@ -76,7 +76,8 @@ export const CounterTwo = () => {
         setMinValueToLocalStorage()
     }
 
-    const countStyle = (count >= maxValue) ? "countError" : "countEnd"
+    const countStyle = (count >= maxValue) ? "countError" + ' ' + 'error': "countEnd"
+    const errorStyle = (minValue >= maxValue || minValue < 0 || maxValue < 0) ? "countError" : "countMessage"
     const inputStyle = (minValue >= maxValue || minValue < 0) ? "inputError" : ""
     const buttonStyle = (minValue >= maxValue || minValue < 0) ? "button" + " " + "buttonDisabled" : "button"
     const buttonIncStyle = (count === maxValue) ? "button" + " " + "buttonDisabled" : "button"
@@ -87,7 +88,7 @@ export const CounterTwo = () => {
             !settingMode
                 ?
                 <div className={'wrapper'}>
-                    {error ? <h1 className={'error'}>{error}</h1> : <h1 className={countStyle}>{count}</h1>}
+                    {error ? <h1 className={errorStyle}>{error}</h1> : <h1 className={countStyle}>{count}</h1>}
                     <div className={'buttons'}>
                         <Button style={buttonIncStyle} name={'Inc'} onClick={addCountValue}/>
                         <Button style={buttonStyle} name={'Reset'} onClick={resetCount}/>
